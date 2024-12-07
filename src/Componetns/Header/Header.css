@@ -1,0 +1,134 @@
+header .topHeader {
+    height: 40px;
+    background-color: #121212;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.bottomHeader h1 {
+    width: 150px;
+}
+
+.bottomHeader h1 img {
+    display: block;
+    width: 100%;
+}
+
+.bottomHeader form {
+    border: 2px solid #121212;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.bottomHeader form input,
+.bottomHeader form button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.bottomHeader form button svg {
+    font-size: 18px;
+}
+
+.right_section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right_section svg {
+    font-size: 24px;
+}
+
+.menu {
+    display: none;
+}
+
+.mobmenu {
+    width: 100%;
+}
+
+.mobmenu {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.806);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(100%);
+    /* Initially hidden */
+    z-index: 1000;
+}
+
+.mobmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.mobmenu ul li {
+    margin: 20px 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.mobmenu ul li:hover {
+    color: #ccc;
+}
+
+/* When the menu is active, show it */
+.mobmenu.active {
+    transform: translateX(0);
+}
+
+
+@media (max-width:560px) {
+    .bottomHeader {
+        width: 90%;
+    }
+}
+
+@media (max-width:480px) {
+    .menu {
+        display: block;
+
+    }
+
+    .menu svg {
+        font-size: 28px;
+    }
+
+    .bottomHeader .right_section {
+        display: none;
+    }
+
+    .bottomHeader h1 {
+        width: 120px;
+    }
+
+    .bottomHeader {
+        flex-direction: row-reverse;
+    }
+}
